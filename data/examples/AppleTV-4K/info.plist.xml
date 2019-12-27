@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>deviceID</key>
+	<string>90:DD:5D:98:F0:0A</string>
+	<key>features</key>
+	<integer>294246758999916535</integer>
+	<key>initialVolume</key>
+	<real>-20</real>
+	<key>keepAliveSendStatsAsBody</key>
+	<true/>
+	<key>macAddress</key>
+	<string>90:DD:5D:A2:D0:20</string>
+	<key>model</key>
+	<string>AppleTV6,2</string>
+	<key>name</key>
+	<string>Stue</string>
+	<key>pi</key>
+	<string>de159742-c022-4514-915b-203cb99f8b71</string>
+	<key>pk</key>
+	<data>
+	I6T4I4X03o9oiIkI1y1stdIp4O5Q+5NZtrKAfmj0qiM=
+	</data>
+	<key>playbackCapabilities</key>
+	<dict>
+		<key>supportsFPSSecureStop</key>
+		<true/>
+		<key>supportsUIForAudioOnlyContent</key>
+		<true/>
+	</dict>
+	<key>protocolVersion</key>
+	<string>1.1</string>
+	<key>psi</key>
+	<string>24609858-187F-424E-814B-A45B0C756B22</string>
+	<key>senderAddress</key>
+	<string>10.42.0.17:55587</string>
+	<key>sourceVersion</key>
+	<string>380.20.1</string>
+	<key>statusFlags</key>
+	<integer>67140</integer>
+	<key>txtAirPlay</key>
+	<data>
+	BWFjbD0wGmRldmljZWlkPTkwOkREOjVEOjk4OkYwOjBBHWZlYXR1cmVzPTB4NEE3RkZG
+	RjcsMHg0MTU1RkRFDWZsYWdzPTB4MTA2NDQoZ2lkPTBFQjU1RkRGLTQwOTAtNEY4OS04
+	MEU0LUJGRTZBQkIzOEJBQgVpZ2w9MQZnY2dsPTEQbW9kZWw9QXBwbGVUVjYsMg1wcm90
+	b3ZlcnM9MS4xJ3BpPWRlMTU5NzQyLWMwMjItNDUxNC05MTViLTIwM2NiOTlmOGI3MShw
+	c2k9MjQ2MDk4NTgtMTg3Ri00MjRFLTgxNEItQTQ1QjBDNzU2QjIyQ3BrPTIzYTRmODIz
+	ODVmNGRlOGY2ODg4ODkwOGQ3MmQ2Y2I1ZDIyOWUwZWU1MGZiOTM1OWI2YjI4MDdlNjhm
+	NGFhMjMQc3JjdmVycz0zODAuMjAuMQ1vc3ZlcnM9MTIuMi4xBHZ2PTI=
+	</data>
+	<key>volumeControlType</key>
+	<integer>4</integer>
+	<key>vv</key>
+	<integer>2</integer>
+</dict>
+</plist>

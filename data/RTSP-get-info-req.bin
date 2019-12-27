@@ -1,0 +1,8 @@
+GET /info?txtAirPlay&txtRAOP RTSP/1.0
+X-Apple-ProtocolVersion: 1
+CSeq: 0
+DACP-ID: ADA239F4521B1802
+Active-Remote: 753030410
+Connection: close
+User-Agent: AirPlay/380.10.1
+

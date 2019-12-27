@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PTPInfo</key>
+	<string>OpenAVNU ArtAndLogic-aPTP-changes 1.0</string>
+	<key>build</key>
+	<string>17.0</string>
+	<key>deviceID</key>
+	<string>00:05:CD:D4:42:96</string>
+	<key>features</key>
+	<integer>496155769145856</integer>
+	<key>firmwareBuildDate</key>
+	<string>Jan 30 2019</string>
+	<key>firmwareRevision</key>
+	<string>1.505.130</string>
+	<key>keepAliveLowPower</key>
+	<true/>
+	<key>keepAliveSendStatsAsBody</key>
+	<true/>
+	<key>manufacturer</key>
+	<string>Sound United</string>
+	<key>model</key>
+	<string>AVR-X3500H</string>
+	<key>name</key>
+	<string>Daemon</string>
+	<key>nameIsFactoryDefault</key>
+	<false/>
+	<key>pi</key>
+	<string>650c20ee-842c-4c01-80ed-22b7fb239881</string>
+	<key>protocolVersion</key>
+	<string>1.1</string>
+	<key>sdk</key>
+	<string>AirPlay;2.0.2</string>
+	<key>sourceVersion</key>
+	<string>366.0</string>
+	<key>statusFlags</key>
+	<integer>4</integer>
+	<key>txtAirPlay</key>
+	<data>
+	BWFjbD0wGmRldmljZWlkPTAwOjA1OkNEOkQ0OjQyOjk2G2ZlYXR1cmVzPTB4NDQ1RjhB
+	MDAsMHgxQzM0MAdyc2Y9MHgwEGZ2PXAyMC4xLjUwNS4xMzAJZmxhZ3M9MHg0EG1vZGVs
+	PUFWUi1YMzUwMEgZbWFudWZhY3R1cmVyPVNvdW5kIFVuaXRlZBtzZXJpYWxOdW1iZXI9
+	QkJXMzYxODEyMTIzNjQNcHJvdG92ZXJzPTEuMQ1zcmN2ZXJzPTM2Ni4wJ3BpPTY1MGMy
+	MGVlLTg0MmMtNGMwMS04MGVkLTIyYjdmYjIzOTg4MShnaWQ9NjUwYzIwZWUtODQyYy00
+	YzAxLTgwZWQtMjJiN2ZiMjM5ODgxBmdjZ2w9MENwaz0wYWNkN2Q2MWIyODRjMGFmNzFj
+	N2VmNGY3ZWE2NDRkZGRlYzIzOGVmMjdjM2MwYWQzZDVkM2JiOWM4YjMxZThm
+	</data>
+</dict>
+</plist>

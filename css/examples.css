@@ -1,0 +1,28 @@
+.client_server, .server_client {
+  border: 1px dashed #aaa;
+  margin: 10px 10px 0px 30px;
+}
+.client_server p, .server_client p {
+  margin: 0;
+  padding: 5px;
+	overflow: auto;
+	font-size: 80%;
+	font-variant: small-caps;
+	font-weight: bold;
+}
+.client_server p {
+  background-color: #ffcccc;
+}
+
+.server_client p {
+  background-color: #ccffcc;
+}
+.client_server pre, .server_client pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ex {
+	text-decoration: underline;
+	font-weight: bold;
+}

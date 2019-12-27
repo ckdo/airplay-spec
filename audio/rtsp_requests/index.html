@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>RTSP Requests - Unofficial AirPlay Specification</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="../../css/table.css">
+        
+        <link rel="stylesheet" href="../../css/examples.css">
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <div id="examples-select"></div>
+                <ol class="chapter"><li class="expanded "><a href="../../introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="expanded "><a href="../../service_discovery.html"><strong aria-hidden="true">2.</strong> Service Discovery</a></li><li class="expanded "><a href="../../features.html"><strong aria-hidden="true">3.</strong> Features</a></li><li class="expanded "><a href="../../status_flags.html"><strong aria-hidden="true">4.</strong> Status Flags</a></li><li class="expanded "><a href="../../photos/index.html"><strong aria-hidden="true">5.</strong> Photos</a></li><li><ol class="section"><li class="expanded "><a href="../../photos/http_requests.html"><strong aria-hidden="true">5.1.</strong> HTTP Requests</a></li><li class="expanded "><a href="../../photos/events.html"><strong aria-hidden="true">5.2.</strong> Events</a></li><li class="expanded "><a href="../../photos/photo_caching.html"><strong aria-hidden="true">5.3.</strong> Photo Caching</a></li><li class="expanded "><a href="../../photos/slideshows.html"><strong aria-hidden="true">5.4.</strong> Slideshows</a></li></ol></li><li class="expanded "><a href="../../video/index.html"><strong aria-hidden="true">6.</strong> Video</a></li><li><ol class="section"><li class="expanded "><a href="../../video/http_requests.html"><strong aria-hidden="true">6.1.</strong> HTTP Requests</a></li><li class="expanded "><a href="../../video/events.html"><strong aria-hidden="true">6.2.</strong> Events</a></li></ol></li><li class="expanded "><a href="../../audio/index.html"><strong aria-hidden="true">7.</strong> Audio</a></li><li><ol class="section"><li class="expanded "><a href="../../audio/rtsp_requests/index.html" class="active"><strong aria-hidden="true">7.1.</strong> RTSP Requests</a></li><li><ol class="section"><li class="expanded "><a href="../../audio/rtsp_requests/get_info.html"><strong aria-hidden="true">7.1.1.</strong> GET /info</a></li><li class="expanded "><a href="../../audio/rtsp_requests/post_pair_setup.html"><strong aria-hidden="true">7.1.2.</strong> POST /pair-setup</a></li><li class="expanded "><a href="../../audio/rtsp_requests/post_pair_verify.html"><strong aria-hidden="true">7.1.3.</strong> POST /pair-verify</a></li><li class="expanded "><a href="../../audio/rtsp_requests/post_fp_setup.html"><strong aria-hidden="true">7.1.4.</strong> POST /fp-setup</a></li><li class="expanded "><a href="../../audio/rtsp_requests/post_auth_setup.html"><strong aria-hidden="true">7.1.5.</strong> POST /auth-setup</a></li><li class="expanded "><a href="../../audio/rtsp_requests/options.html"><strong aria-hidden="true">7.1.6.</strong> OPTIONS</a></li><li class="expanded "><a href="../../audio/rtsp_requests/announce.html"><strong aria-hidden="true">7.1.7.</strong> ANNOUNCE</a></li><li class="expanded "><a href="../../audio/rtsp_requests/setup.html"><strong aria-hidden="true">7.1.8.</strong> SETUP</a></li><li class="expanded "><a href="../../audio/rtsp_requests/setpeers.html"><strong aria-hidden="true">7.1.9.</strong> SETPEERS</a></li><li class="expanded "><a href="../../audio/rtsp_requests/post_command.html"><strong aria-hidden="true">7.1.10.</strong> POST /command</a></li><li class="expanded "><a href="../../audio/rtsp_requests/post_feedback.html"><strong aria-hidden="true">7.1.11.</strong> POST /feedback</a></li><li class="expanded "><a href="../../audio/rtsp_requests/post_audio_mode.html"><strong aria-hidden="true">7.1.12.</strong> POST /audioMode</a></li><li class="expanded "><a href="../../audio/rtsp_requests/record.html"><strong aria-hidden="true">7.1.13.</strong> RECORD</a></li><li class="expanded "><a href="../../audio/rtsp_requests/flush.html"><strong aria-hidden="true">7.1.14.</strong> FLUSH</a></li><li class="expanded "><a href="../../audio/rtsp_requests/teardown.html"><strong aria-hidden="true">7.1.15.</strong> TEARDOWN</a></li></ol></li><li class="expanded "><a href="../../audio/rtp_streams.html"><strong aria-hidden="true">7.2.</strong> RTP Streams</a></li><li class="expanded "><a href="../../audio/volume_control.html"><strong aria-hidden="true">7.3.</strong> Volume Control</a></li><li class="expanded "><a href="../../audio/metadata.html"><strong aria-hidden="true">7.4.</strong> Metadata</a></li><li class="expanded "><a href="../../audio/airport_express_authentication.html"><strong aria-hidden="true">7.5.</strong> AirPort Express Authentication</a></li><li class="expanded "><a href="../../audio/remote_control.html"><strong aria-hidden="true">7.6.</strong> Remote Control</a></li></ol></li><li class="expanded "><a href="../../screen_mirroring/index.html"><strong aria-hidden="true">8.</strong> Screen Mirroring</a></li><li><ol class="section"><li class="expanded "><a href="../../screen_mirroring/http_requests.html"><strong aria-hidden="true">8.1.</strong> HTTP Requests</a></li><li class="expanded "><a href="../../screen_mirroring/stream_packets.html"><strong aria-hidden="true">8.2.</strong> Stream Packets</a></li><li class="expanded "><a href="../../screen_mirroring/time_synchronization.html"><strong aria-hidden="true">8.3.</strong> Time Synchronization</a></li></ol></li><li class="expanded "><a href="../../pairing/index.html"><strong aria-hidden="true">9.</strong> Pairing</a></li><li><ol class="section"><li class="expanded "><a href="../../pairing/hkp.html"><strong aria-hidden="true">9.1.</strong> HomeKit Based Pairings</a></li><li class="expanded "><a href="../../pairing/legacy.html"><strong aria-hidden="true">9.2.</strong> Legacy Pairing</a></li></ol></li><li class="expanded "><a href="../../known_implementations.html"><strong aria-hidden="true">10.</strong> Known Implementations</a></li><li class="expanded "><a href="../../contributing.html"><strong aria-hidden="true">11.</strong> Contributing</a></li><li class="expanded "><a href="../../history.html"><strong aria-hidden="true">12.</strong> History</a></li><li class="expanded "><a href="../../resources.html"><strong aria-hidden="true">13.</strong> Resources</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Unofficial AirPlay Specification</h1>
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#rtsp-requests" id="rtsp-requests">RTSP Requests</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../audio/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../audio/rtsp_requests/get_info.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../audio/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../audio/rtsp_requests/get_info.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        
+        <script type="text/javascript" src="../../js/app.js" charset="utf-8"></script>
+        
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
